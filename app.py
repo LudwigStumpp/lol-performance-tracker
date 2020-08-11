@@ -1,10 +1,21 @@
 import streamlit as st
 import modules.tracker as tracker
 
-'# LOL Performance Tracker'
+"""
+# LOL Performance Tracker
+This tool helps you to track your performance on the rift.
 
+For the last 10 games, the tools shows:
+- KDA
+- Gold / Min
+- Dmg / Min
+- Vision / Min
 
-summoner_name = st.text_input("Please enter your summoner name and hit Enter.")
+Wins are marked in green, losses in red.
+"""
+
+'### Enter your summoner name and hit Enter:'
+summoner_name = st.text_input('')
 
 if summoner_name != '':
     try:
@@ -16,3 +27,8 @@ if summoner_name != '':
         'Invalid summoner name'
     except:
         'Try another summoner name'
+
+'''
+------
+Made with :heart: in Munich by [Ludwig](https://ludwigstumpp.com).
+'''
