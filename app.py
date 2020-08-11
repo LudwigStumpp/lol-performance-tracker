@@ -2,10 +2,10 @@ import streamlit as st
 import modules.tracker as tracker
 
 """
-# LOL Performance Tracker
+# League of Legends Performance Tracker
 This tool helps you to track your performance on the rift.
 
-For the last 10 games, the tools shows:
+For the last 10 games, it shows in a graph:
 - KDA
 - Gold / Min
 - Dmg / Min
@@ -24,9 +24,9 @@ if summoner_name != '':
             f'{summoner_name} last 10 matches:'
             st.pyplot()
     except tracker.InvalidSummonerNameError:
-        'Invalid summoner name'
+        st.error('Invalid summoner name.')
     except:
-        'Try another summoner name'
+        st.error('Ups! Something went wrong. Try another summoner name.')
 
 '''
 ------
