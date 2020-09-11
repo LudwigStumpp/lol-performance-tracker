@@ -89,7 +89,7 @@ def get_performance(summoner_name):
 
     table_rows = []
     df = pd.DataFrame(columns=['Lane', 'Champ', 'Win',
-                               'KDA', 'Gold / Min', 'Dmg / Min', 'Vision / Min'])
+                               'KDA', 'Gold / Min', 'Dmg / Min', 'Vision / Min', 'CS / Min'])
 
     for i in range(len(last_matches)):
         match = last_matches[i]
@@ -116,8 +116,7 @@ def get_performance(summoner_name):
                            total_minions_killed) * 60 / game_duration
         vis_per_min = vision_score * 60 / game_duration * 10
 
-        df.loc[len(last_matches) - i - 1] = [lane, champion_name,
-                                             win, kda, gold_per_min, dmg_per_min, vis_per_min]
+        df.loc[len(last_matches) - i - 1] = [lane, champion_name, win, kda, gold_per_min, dmg_per_min, vis_per_min, minions_per_min]
 
         time.sleep(0.1)
 
@@ -150,6 +149,4 @@ api_key = os.environ['LOL_API_KEY']
 header = {
     'X-Riot-Token': api_key,
 }
-
-with open('champion.json', encoding='utf8') as json_file:
-    champions_dict = json.load(json_file)
+champions_dict = requests.get('http://ddragon.leagueoflegends.com/cdn/10.18.1/data/en_US/champion.json').json()
