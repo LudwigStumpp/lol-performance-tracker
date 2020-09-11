@@ -1,7 +1,7 @@
 import streamlit as st
-import modules.tracker as tracker
+import tracker as tracker
 
-"""
+'''
 # League of Legends Performance Tracker
 This tool helps you to track your performance on the rift.
 
@@ -12,7 +12,7 @@ For the last 10 games, it shows in a graph:
 - Vision / Min
 
 Wins are marked in green, losses in red.
-"""
+'''
 
 '### Enter your summoner name and hit Enter:'
 summoner_name = st.text_input('')
@@ -29,6 +29,11 @@ if summoner_name != '':
         st.error('Ups! Something went wrong. Try another summoner name.')
 
 '''
+### Info on units:
+One needs to multiply to get the real values:
+- Gold / Min: * 100 
+- DMG / Min: * 100
+- Vision / Min: / 10
 ------
 Made with :heart: in Munich by [Ludwig](https://ludwigstumpp.com).
 '''
