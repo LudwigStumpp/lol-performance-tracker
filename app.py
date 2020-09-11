@@ -10,6 +10,7 @@ For the last 10 games, it shows in a graph:
 - Gold / Min
 - Dmg / Min
 - Vision / Min
+- CS / Min
 
 Wins are marked in green, losses in red.
 '''
