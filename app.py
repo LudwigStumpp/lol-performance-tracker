@@ -22,9 +22,9 @@ summoner_name = st.text_input('')
 if summoner_name != '':
     try:
         with st.spinner(f'Hello {summoner_name}! We will grab your last 10 matches now...'):
-            df = get_performance(summoner_name)
+            fig = get_performance(summoner_name)
             f'{summoner_name} last 10 matches:'
-            st.pyplot()
+            st.pyplot(fig)
     except InvalidSummonerNameError:
         st.error('Invalid summoner name.')
     except:
