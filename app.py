@@ -31,7 +31,7 @@ if summoner_name != '':
 '''
 ### Info on units:
 One needs to multiply to get the real values:
-- Gold / Min: * 100 
+- Gold / Min: * 100
 - DMG / Min: * 100
 - Vision / Min: / 10
 ------
