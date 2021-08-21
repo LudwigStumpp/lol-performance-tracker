@@ -35,6 +35,7 @@ def get_performance(summoner_name):
     df = df[::-1]
 
     # multiple line plot
+    fig, _ = plt.subplots()
     for column in df.columns:
         if column not in ['Lane', 'Champ', 'Win']:
             plt.plot(column, data=df)
@@ -54,3 +55,5 @@ def get_performance(summoner_name):
     # Grid + Legend
     plt.grid(color='k', linestyle='-', linewidth=0.5)
     plt.legend()
+
+    return fig
