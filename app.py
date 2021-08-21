@@ -27,8 +27,6 @@ if summoner_name != '':
             st.pyplot(fig)
     except InvalidSummonerNameError:
         st.error('Invalid summoner name.')
-    except:
-        st.error('Ups! Something went wrong. Try another summoner name.')
 
 '''
 ### Info on units:
